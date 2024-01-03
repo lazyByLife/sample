@@ -1,4 +1,4 @@
-package com.lazybylife.sample
+package com.lazybylife.sample.domain.hello
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
