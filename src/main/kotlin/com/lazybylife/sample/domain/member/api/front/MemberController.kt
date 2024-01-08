@@ -1,4 +1,4 @@
-package com.lazybylife.sample.domain.member.api
+package com.lazybylife.sample.domain.member.api.front
 
 import com.lazybylife.sample.domain.member.dto.MemberResponse
 import com.lazybylife.sample.domain.member.dto.SignUpRequest

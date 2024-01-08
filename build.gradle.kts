@@ -39,6 +39,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("com.mysql:mysql-connector-j:8.2.0")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("com.infobip:infobip-spring-data-jpa-querydsl-boot-starter:9.0.2")
+	kapt("com.querydsl:querydsl-apt:5.0.0:jakarta")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

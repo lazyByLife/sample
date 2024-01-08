@@ -1,11 +1,8 @@
 package com.lazybylife.sample.domain.member.persistence.entity
 
+import com.lazybylife.sample.domain.member.code.MemberStatus
 import com.lazybylife.sample.domain.member.dto.SignUpRequest
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
@@ -17,12 +14,16 @@ class Member(
     @Column
     var email: String,
 
+    @Enumerated(EnumType.STRING)
+    val status: MemberStatus,
+
     @Column
     val createdAt: LocalDateTime,
 
 ) {
     constructor(request: SignUpRequest) : this(
         email = request.email,
+        status = MemberStatus.ENABLE,
         createdAt = LocalDateTime.now()
     )
 }
